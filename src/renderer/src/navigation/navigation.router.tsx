@@ -1,4 +1,4 @@
-import { Loading } from '@renderer/pages/Loading'
+import { Loading } from '@renderer/pages/loading/Loading'
 import { createBrowserRouter } from 'react-router'
 export const routerNavigation = createBrowserRouter([
   {
