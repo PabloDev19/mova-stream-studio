@@ -9,6 +9,7 @@ function createWindow(): void {
     width: 1200,
     height: 850,
     show: false,
+    resizable: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -19,6 +20,7 @@ function createWindow(): void {
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
+    mainWindow.title = 'Mova Stream | v1.1.2'
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
