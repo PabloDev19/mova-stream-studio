@@ -1,0 +1,64 @@
+:root,
+[data-theme='dark'] {
+  /* --- Fondos --- */
+  --bg-main: #0b0d14; /* Fondo general de la aplicación */
+  --bg-sidebar: #10131d; /* Fondo de la barra lateral */
+  --bg-card: #151924; /* Fondo de tarjetas y contenedores */
+  --bg-card-hover: #1c2130; /* Fondo de tarjetas al pasar el cursor */
+  --bg-input: #1c2130; /* Fondo de inputs y campos de búsqueda */
+
+  /* --- Textos --- */
+  --text-main: #ffffff; /* Títulos y texto principal */
+  --text-muted: #8b92a5; /* Descripciones, subtítulos y textos secundarios */
+  --text-inverse: #0b0d14; /* Texto para fondos claros */
+
+  /* --- Color Principal (Violeta/Morado de marca) --- */
+  --primary: #7c3aed; /* Morado activo en botones y navegación */
+  --primary-hover: #6d28d9; /* Morado en hover */
+  --primary-light: #8b5cf6; /* Acento secundario morado */
+
+  /* --- Estados y Alertas --- */
+  --success: #10b981; /* Verde para "Sistema en línea" / "Conectado" */
+  --danger: #ef4444; /* Rojo para "Desconectado" / eliminar */
+  --warning: #f59e0b; /* Amarillo para avisos */
+
+  /* --- Colores de Plataformas --- */
+  --yt-red: #ff0000; /* YouTube */
+  --twitch-purple: #9146ff; /* Twitch */
+  --kick-green: #53fc18; /* Kick */
+
+  /* --- Bordes y Separadores --- */
+  --border-color: #212636; /* Líneas divisorias y bordes de tarjetas */
+}
+
+[data-theme='light'] {
+  /* --- Fondos --- */
+  --bg-main: #f4f5f7; /* Fondo general claro */
+  --bg-sidebar: #ffffff; /* Fondo de la barra lateral claro */
+  --bg-card: #ffffff; /* Fondo de tarjetas blanco */
+  --bg-card-hover: #eaedf1; /* Fondo de tarjetas en hover claro */
+  --bg-input: #e2e8f0; /* Fondo de inputs claro */
+
+  /* --- Textos --- */
+  --text-main: #0f172a; /* Texto principal oscuro */
+  --text-muted: #64748b; /* Texto secundario claro */
+  --text-inverse: #ffffff; /* Texto para fondos oscuros */
+
+  /* --- Color Principal --- */
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-light: #8b5cf6;
+
+  /* --- Estados y Alertas --- */
+  --success: #059669;
+  --danger: #dc2626;
+  --warning: #d97706;
+
+  /* --- Colores de Plataformas --- */
+  --yt-red: #e60000;
+  --twitch-purple: #772ce8;
+  --kick-green: #10b981; /* Ajustado para mejor contraste en modo claro */
+
+  /* --- Bordes y Separadores --- */
+  --border-color: #e2e8f0;
+}

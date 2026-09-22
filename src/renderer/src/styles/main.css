@@ -3,3 +3,7 @@
 /* 
   -webkit-user-drag: none;
 */
+
+body {
+  background-color: var(--bg-main);
+}
