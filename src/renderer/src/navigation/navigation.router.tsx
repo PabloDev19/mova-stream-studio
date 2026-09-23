@@ -1,3 +1,5 @@
+import { DashboardLayout } from '@renderer/layouts/DashboardLayout'
+import { Dashboard } from '@renderer/pages/dashboard/Dashboard'
 import { Loading } from '@renderer/pages/loading/Loading'
 import { createBrowserRouter } from 'react-router'
 export const routerNavigation = createBrowserRouter([
@@ -7,6 +9,16 @@ export const routerNavigation = createBrowserRouter([
       {
         index: true,
         element: <Loading />
+      }
+    ]
+  },
+  {
+    path: '/dashboard',
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />
       }
     ]
   }
