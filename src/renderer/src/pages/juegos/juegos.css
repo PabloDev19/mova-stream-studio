@@ -1,0 +1,81 @@
+.view_games {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-main);
+  gap: 1vw;
+
+  .container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    gap: 1vw;
+
+    > .card_game {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border: 2px solid var(--border-color);
+      border-radius: 0.5vw;
+      color: var(--text-main);
+      font-family: var(--font-afacad-flux);
+      gap: 0.2vw;
+      padding: 1vw;
+      background-color: var(--bg-card);
+
+      > .photo {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 0.5vw;
+      }
+
+      > .name {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      > .commands {
+        font-size: 14px;
+
+        > .value {
+          font-weight: 800;
+        }
+      }
+
+      > .group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5vw;
+
+        > .action {
+          flex: 1;
+          border: none;
+          font-family: var(--font-afacad-flux);
+          background: none;
+          padding: 0.4vw 0vw;
+          border-radius: 0.5vw;
+          color: var(--text-main);
+          cursor: pointer;
+          font-weight: 600;
+
+          &.setting {
+            background-color: var(--primary);
+          }
+
+          &.disconnect {
+            background-color: var(--bg-card-hover);
+          }
+        }
+      }
+    }
+  }
+}

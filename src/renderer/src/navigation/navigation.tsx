@@ -1,6 +1,7 @@
 import { DashboardLayout } from '@renderer/layouts/DashboardLayout'
 import { Comandos } from '@renderer/pages/comandos/Comandos'
 import { Inicio } from '@renderer/pages/inicio/Inicio'
+import { Juegos } from '@renderer/pages/juegos/Juegos'
 import { Loading } from '@renderer/pages/loading/Loading'
 import { createBrowserRouter } from 'react-router'
 export const routerNavigation = createBrowserRouter([
@@ -24,6 +25,10 @@ export const routerNavigation = createBrowserRouter([
       {
         path: 'commands',
         element: <Comandos />
+      },
+      {
+        path: 'games',
+        element: <Juegos />
       }
     ]
   }
