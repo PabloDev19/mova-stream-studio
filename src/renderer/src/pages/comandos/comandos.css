@@ -1,0 +1,314 @@
+.view_command {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-input);
+
+  > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > .link {
+      height: fit-content;
+      border: none;
+      padding: 1vw 1vw;
+      background-color: var(--primary-light);
+      border-radius: 0.5vw;
+      color: var(--text-main);
+      font-family: var(--font-afacad-flux);
+
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+
+      > .icon {
+        font-size: 12px;
+      }
+    }
+  }
+
+  > .search-query {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+
+    > .input-group {
+      padding: 0.8vw 1vw;
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+      background-color: var(--bg-input);
+      flex: 1;
+      border-radius: 0.5vw;
+
+      > .icon {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      > .search {
+        flex: 1;
+        height: 100%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: var(--font-afacad-flux);
+        color: var(--text-muted);
+        font-size: 15px;
+      }
+    }
+
+    > .select-group {
+      border-radius: 0.5vw;
+      background-color: var(--bg-card);
+      border: none;
+      outline: none;
+      padding: 0.8vw 1vw;
+
+      font-family: var(--font-afacad-flux);
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+  }
+
+  .group-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.6rem;
+    overflow: hidden;
+
+    font-family: var(--font-afacad-flux);
+    color: var(--text-main);
+    font-size: 14px;
+
+    /* Header */
+    > thead {
+      background-color: color-mix(in srgb, var(--bg-card) 92%, var(--text-main));
+
+      > tr {
+        > th {
+          padding: 0.85rem 1rem;
+
+          color: var(--text-muted);
+          font-size: 13px;
+          font-weight: 600;
+          text-align: left;
+          white-space: nowrap;
+
+          border-bottom: 1px solid var(--border-color);
+
+          &.platforms,
+          &.status {
+            text-align: center;
+          }
+
+          &.actions {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    /* Body */
+    > tbody {
+      > tr {
+        transition:
+          background-color 0.15s ease,
+          transform 0.15s ease;
+
+        &:not(:last-child) {
+          > td {
+            border-bottom: 1px solid var(--border-color);
+          }
+        }
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--bg-card) 94%, var(--text-main));
+        }
+
+        > td {
+          padding: 0.9rem 1rem;
+          vertical-align: middle;
+
+          &:first-child {
+            padding-left: 1.1rem;
+          }
+
+          &:last-child {
+            padding-right: 1.1rem;
+          }
+        }
+      }
+    }
+
+    /* Command */
+    .command-name {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 0.3rem 0.55rem;
+
+      border-radius: 0.35rem;
+
+      background-color: var(--bg-main);
+
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 600;
+
+      border: 1px solid var(--border-color);
+    }
+
+    /* Description */
+    .description {
+      display: block;
+
+      max-width: 280px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      color: var(--text-muted);
+    }
+
+    /* Platforms */
+    .platforms {
+      text-align: center;
+
+      .platform-list {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+
+      .platform {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+
+        border-radius: 0.4rem;
+
+        background-color: var(--bg-main);
+
+        color: var(--text-muted);
+
+        font-size: 14px;
+
+        border: 1px solid var(--border-color);
+
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease,
+          background-color 0.15s ease;
+
+        &:hover {
+          background-color: var(--bg-card);
+        }
+
+        &.youtube:hover {
+          color: #ff0000;
+          border-color: #ff0000;
+        }
+
+        &.twitch:hover {
+          color: #9146ff;
+          border-color: #9146ff;
+        }
+
+        &.kick:hover {
+          color: #53fc18;
+          border-color: #53fc18;
+        }
+      }
+    }
+
+    /* Status */
+    .status {
+      text-align: center;
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        padding: 0.3rem 0.55rem;
+
+        border-radius: 999px;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        &.active {
+          color: var(--success);
+          background-color: color-mix(in srgb, var(--success) 10%, transparent);
+        }
+      }
+
+      .status-dot {
+        width: 6px;
+        height: 6px;
+
+        border-radius: 50%;
+
+        background-color: currentColor;
+      }
+    }
+
+    /* Actions */
+    .actions {
+      text-align: right;
+
+      .action-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.4rem;
+      }
+
+      .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 32px;
+        height: 32px;
+
+        border-radius: 0.4rem;
+
+        color: var(--text-muted);
+
+        text-decoration: none;
+
+        transition:
+          color 0.15s ease,
+          background-color 0.15s ease;
+
+        &.edit:hover {
+          color: var(--warning);
+
+          background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+        }
+
+        &.delete:hover {
+          color: var(--danger);
+
+          background-color: color-mix(in srgb, var(--danger) 10%, transparent);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.ui-title {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-main);
+  font-family: var(--font-afacad-flux);
+}
+
+.ui-sub_title {
+  font-size: 14px;
+  font-family: var(--font-afacad-flux);
+  color: var(--text-muted);
+}

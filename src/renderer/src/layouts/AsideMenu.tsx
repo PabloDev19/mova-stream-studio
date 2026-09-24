@@ -9,7 +9,7 @@ interface LinkNavigationType {
 
 const LinkNavigation = ({ label, icon, url }: LinkNavigationType) => {
   return (
-    <NavLink className={({ isActive }) => (isActive ? 'link active' : 'link')} to={url}>
+    <NavLink end className={({ isActive }) => (isActive ? 'link active' : 'link')} to={url}>
       <i className={`icon ${icon}`} />
       <span className="text">{label}</span>
     </NavLink>
@@ -37,6 +37,7 @@ export const AsideMenu = () => {
           label="Economia"
           url="/dashboard/economy"
         />
+        <LinkNavigation icon="fa-solid fa-gamepad" label="Juegos" url="/dashboard/games" />
         <LinkNavigation icon="fa-solid fa-gear" label="Configuración" url="/dashboard/settings" />
       </nav>
 

@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
 import './inicio.css'
+import { SubTitle, Title } from '@renderer/components/ui/Page'
 
 interface CardType {
   label: string
   icon: string
   color: string
-  status: boolean
+  status?: boolean
 }
 
 interface ResumenLogType {
@@ -63,9 +65,11 @@ const ActivityLogItem = ({ social_media, type, message, time }: ActivityLogType)
 
 export const Inicio = () => {
   return (
-    <section className="view_inicio">
-      <h3 className="title">¡Hola, Pablo Placencia!</h3>
-      <h4 className="sub_title">Tu ecosistema de streaming está listo</h4>
+    <section className="page view_inicio">
+      <div className="group">
+        <Title>¡Hola, Pablo Placencia!</Title>
+        <SubTitle>Tu ecosistema de streaming está listo</SubTitle>
+      </div>
 
       <div style={{ flex: 1 }} className="container">
         <article className="streaming_media">
@@ -128,9 +132,9 @@ export const Inicio = () => {
             Gestiona tus comandos, eventos y recompensas desde un solo lugar.
           </h3>
 
-          <a href="#" className="link">
+          <Link to="commands" className="link">
             Ver Comandos
-          </a>
+          </Link>
         </article>
       </div>
     </section>
