@@ -22,13 +22,13 @@
   > .container {
     width: 100%;
     display: flex;
-    gap: 4vw;
+    gap: 1.5vw;
 
     > .streaming_media {
       display: flex;
       justify-content: space-between;
       gap: 1vw;
-      width: 60%;
+      width: 70%;
 
       > .card {
         flex: 1;
@@ -96,6 +96,98 @@
         flex: 1;
         display: flex;
         justify-content: space-between;
+      }
+    }
+
+    > .activity_log {
+      width: 70%;
+      background-color: var(--bg-card);
+      padding: 1vw;
+      border-radius: 1vw;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      > .group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > .label {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        > .link {
+          text-decoration: none;
+          color: var(--primary-light);
+
+          display: flex;
+          align-items: center;
+          gap: 0.5vw;
+
+          > .icon {
+            font-size: 14px;
+          }
+        }
+      }
+
+      > .item {
+        display: flex;
+        gap: 1vw;
+        font-size: 14px;
+        color: var(--text-muted);
+
+        > .badge {
+          padding: 0px 10px;
+          border-radius: 0.5vw;
+          background-color: purple;
+        }
+
+        > .time {
+          margin-left: auto;
+        }
+      }
+    }
+
+    > .start_stream {
+      flex: 1;
+      height: 100%;
+      background-color: var(--primary-hover-unselect);
+      border-radius: 0.5vw;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1vw;
+
+      > .icon {
+        font-size: 40px;
+      }
+
+      > .title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      > .message {
+        text-align: center;
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      > .link {
+        width: 70%;
+        padding: 10px;
+        text-align: center;
+        font-weight: 600;
+        background-color: var(--primary);
+        text-decoration: none;
+        color: var(--text-main);
+        border-radius: 0.5vw;
       }
     }
   }
