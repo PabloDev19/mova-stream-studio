@@ -1,0 +1,102 @@
+.view_inicio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+
+  color: var(--text-main);
+  font-family: var(--font-afacad-flux);
+  padding: 1.5vw;
+
+  > .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  > .sub_title {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  > .container {
+    width: 100%;
+    display: flex;
+    gap: 4vw;
+
+    > .streaming_media {
+      display: flex;
+      justify-content: space-between;
+      gap: 1vw;
+      width: 60%;
+
+      > .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-card);
+        padding: 2vw;
+        border-radius: 1vw;
+        gap: 1vw;
+
+        > .icon {
+          font-size: 3vw;
+        }
+
+        > .group {
+          > .title {
+            font-weight: 800;
+          }
+
+          > .status {
+            > .icon {
+              font-size: 10px;
+            }
+            font-size: 14px;
+            color: var(--success);
+          }
+        }
+
+        > .action {
+          border-radius: 0.5vw;
+          border: none;
+          background-color: var(--bg-card-hover);
+          color: var(--text-muted);
+          padding: 0.8vw 0vw;
+          font-family: var(--font-afacad-flux);
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.5s ease;
+
+          &:hover {
+            background-color: var(--bg-input);
+          }
+        }
+      }
+    }
+
+    > .resumen_fast {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-card);
+      padding: 1.5vw;
+      border-radius: 1vw;
+      gap: 1vw;
+      color: var(--text-muted);
+
+      > .title {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: var(--font-bakbak-one);
+      }
+
+      > .item {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

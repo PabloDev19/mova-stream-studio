@@ -17,12 +17,13 @@
 
   /* --- Textos --- */
   --text-main: #ffffff; /* Títulos y texto principal */
-  --text-muted: #8b92a5; /* Descripciones, subtítulos y textos secundarios */
+  --text-muted: #c2c7d6; /* Descripciones, subtítulos y textos secundarios */
   --text-inverse: #0b0d14; /* Texto para fondos claros */
 
   /* --- Color Principal (Violeta/Morado de marca) --- */
   --primary: #7c3aed; /* Morado activo en botones y navegación */
   --primary-hover: #6d28d9; /* Morado en hover */
+  --primary-hover-unselect: #44207e; /* Morado en hover */
   --primary-light: #8b5cf6; /* Acento secundario morado */
 
   /* --- Estados y Alertas --- */
@@ -31,7 +32,7 @@
   --warning: #f59e0b; /* Amarillo para avisos */
 
   /* --- Colores de Plataformas --- */
-  --yt-red: #ff0000; /* YouTube */
+  --yt-red: #eb3535; /* YouTube */
   --twitch-purple: #9146ff; /* Twitch */
   --kick-green: #53fc18; /* Kick */
 
@@ -59,7 +60,7 @@
 
   /* --- Estados y Alertas --- */
   --success: #059669;
-  --danger: #dc2626;
+  --danger: #dfafaf;
   --warning: #d97706;
 
   /* --- Colores de Plataformas --- */

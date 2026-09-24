@@ -1,5 +1,5 @@
 import { DashboardLayout } from '@renderer/layouts/DashboardLayout'
-import { Dashboard } from '@renderer/pages/dashboard/Dashboard'
+import { Inicio } from '@renderer/pages/inicio/Inicio'
 import { Loading } from '@renderer/pages/loading/Loading'
 import { createBrowserRouter } from 'react-router'
 export const routerNavigation = createBrowserRouter([
@@ -18,7 +18,7 @@ export const routerNavigation = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />
+        element: <Inicio />
       }
     ]
   }

@@ -10,6 +10,9 @@
     box-shadow: 1px 0px 10px black;
     padding: 1.5vw;
 
+    display: flex;
+    flex-direction: column;
+
     > .logo {
       display: flex;
       align-items: center;
@@ -32,13 +35,65 @@
 
       > .link {
         width: 100%;
-        padding: 1vw 0vw;
         text-decoration: none;
-        font-family: var(--font-afacad-flux);
-        /* font-family: var(--font-bakbak-one); */
-        color: var(--text-muted);
+
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+
+        padding: 1vw 0.5vw;
+        border-radius: 0.8vw;
+
+        transition:
+          background-color 0.5s,
+          padding 0.5s ease;
+
+        > .icon {
+          color: var(--text-muted);
+        }
+
+        > .text {
+          font-family: var(--font-afacad-flux);
+          font-size: 16px;
+          color: var(--text-muted);
+        }
+
+        &.active {
+          background-color: var(--primary);
+
+          > .icon {
+            color: var(--text-main);
+          }
+
+          > .text {
+            font-weight: 600;
+            color: var(--text-main);
+          }
+        }
+
+        &:not(.active) {
+          &:hover {
+            background-color: var(--primary-hover-unselect);
+          }
+        }
+
+        &:hover {
+          padding-left: 1.5vw;
+        }
+      }
+    }
+
+    > .footer {
+      margin-top: auto;
+      font-family: var(--font-afacad-flux);
+
+      > .message {
+        color: rgb(76, 175, 10);
+      }
+
+      > .version {
         font-size: 14px;
-        font-weight: 500;
+        color: var(--text-muted);
       }
     }
   }
