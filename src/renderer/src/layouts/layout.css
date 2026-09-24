@@ -1,17 +1,50 @@
 .dashboard_layout {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
 
   .aside_menu {
     width: 20%;
     height: 100%;
-    background-color: red;
+    background-color: var(--bg-sidebar);
+    box-shadow: 1px 0px 10px black;
+    padding: 1.5vw;
+
+    > .logo {
+      display: flex;
+      align-items: center;
+
+      > img {
+        width: 4vw;
+        height: 4vw;
+      }
+
+      > .title {
+        color: var(--text-main);
+        font-family: var(--font-bakbak-one);
+      }
+    }
+
+    > .navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+
+      > .link {
+        width: 100%;
+        padding: 1vw 0vw;
+        text-decoration: none;
+        font-family: var(--font-afacad-flux);
+        /* font-family: var(--font-bakbak-one); */
+        color: var(--text-muted);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
   }
 
   .render_view {
     width: 80%;
     height: 100%;
-    background-color: purple;
   }
 }
